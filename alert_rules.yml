@@ -1,3 +1,6 @@
+# Esto es un ejemplo básico de una alerta. Añadir las alertas necesarias aquí.
+# Documentación oficial:
+# https://prometheus.io/docs/prometheus/latest/configuration/configuration/
 groups:
   - name: alerts_rules
     rules:
