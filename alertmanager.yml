@@ -1,6 +1,9 @@
+# Esto es un ejemplo de configuración para AlertManager usando Slack y una plantilla para las notificaciones.
+# Documentación oficial:
+# https://prometheus.io/docs/alerting/latest/configuration/
 global:
   resolve_timeout: 1m
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  slack_api_url: '' # Introduce tu Slack API URL.
 
 route:
   receiver: 'slack-notifications'
@@ -10,7 +13,6 @@ receivers:
     slack_configs:
       - channel: '#alertmanager'  # Cambia esto por el canal de Slack
         send_resolved: true
-        icon_url: https://avatars3.githubusercontent.com/u/3380462 # Para darle formato a las etiquetas
         title: |-
           [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ .CommonLabels.alertname }} for {{ .CommonLabels.job }}
           {{- if gt (len .CommonLabels) (len .GroupLabels) -}}
