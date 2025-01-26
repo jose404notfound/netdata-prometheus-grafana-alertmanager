@@ -1,0 +1,11 @@
+groups:
+  - name: alerts_rules
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance {{ $labels.instance }} is down"
+          description: "No metrics have been received from {{ $labels.instance }} for the last 5 minutes."
