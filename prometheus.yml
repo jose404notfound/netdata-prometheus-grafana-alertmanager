@@ -9,11 +9,11 @@ alerting:
   alertmanagers:
   - static_configs:
     - targets:
-      - 116.203.102.137:9093
+      - <IP>:9093 # Introduce la IP con la que estás trabajando.
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-  - 'alert_rules.yml'
+  - 'alert_rules.yml' # Archivo(s) donde tenemos las reglas de las alertas.
   # - "first_rules.yml"
   # - "second_rules.yml"
 
@@ -27,7 +27,7 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-    - targets: ['116.203.102.137:9090']
+    - targets: ['<IP>:9090'] # Introduce la IP con la que estás trabajando.
 
 #################################################################################################
 
@@ -48,6 +48,6 @@ scrape_configs:
       #server: ['prometheus1']
     honor_labels: true
     static_configs:
-      - targets: ['116.203.102.137:19999']
+      - targets: ['<IP>:19999'] # Introduce la IP con la que estás trabajando.
 
 #################################################################################################
