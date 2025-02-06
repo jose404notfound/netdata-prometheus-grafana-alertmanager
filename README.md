@@ -68,7 +68,3 @@ Para más información sobre la configuración de alertas, consulta la [document
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request para sugerencias o mejoras.
 
-## Licencia
-
-Este proyecto está bajo la Licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
-
